@@ -7,13 +7,30 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <Button
+        android:id="@+id/button"
+        android:layout_width="381dp"
+        android:layout_height="45dp"
+        tools:ignore="MissingConstraints,TouchTargetSizeCheck"
+        tools:layout_editor_absoluteX="22dp"
+        tools:layout_editor_absoluteY="658dp"
+        tools:text="count" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="366dp"
+        android:layout_height="46dp"
+        tools:ignore="MissingConstraints,SpeakableTextPresentCheck,TouchTargetSizeCheck"
+        tools:layout_editor_absoluteX="22dp"
+        tools:layout_editor_absoluteY="16dp"
+        tools:text="Toast" />
+
     <TextView
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
+        android:text="0"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="201dp"
+        tools:layout_editor_absoluteY="338dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
