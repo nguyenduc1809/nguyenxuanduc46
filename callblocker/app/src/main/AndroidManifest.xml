@@ -1,0 +1,32 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.callblocker">
+
+    <!-- Quyền đọc trạng thái cuộc gọi -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+
+    <!-- Quyền từ chối cuộc gọi (chỉ hoạt động trên một số thiết bị) -->
+    <uses-permission android:name="android.permission.ANSWER_PHONE_CALLS"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="Call Blocker"
+        android:theme="@style/Theme.Callblocker">
+
+        <activity android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <!-- Khai báo BroadcastReceiver để lắng nghe cuộc gọi đến -->
+        <receiver android:name=".CallReceiver" android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.PHONE_STATE"/>
+            </intent-filter>
+        </receiver>
+
+    </application>
+</manifest>
